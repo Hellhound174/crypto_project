@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'MainController@index');
+Route::get('/main', 'MainController@index');
 
 
 Route::get('/uploadfile','UploadfileController@index');
