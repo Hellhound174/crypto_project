@@ -11,7 +11,7 @@ class MainController extends Controller
 {
     function index()
     {
-        return view('login.blade.php');
+        return view('login');
     }
 
 
