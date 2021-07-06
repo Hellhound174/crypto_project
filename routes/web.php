@@ -16,9 +16,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/main', 'MainController@index');
 
 
-Route::get('/uploadfile','UploadfileController@index');
-Route::post('/uploadfile', 'UploadfileController@upload');
-Route::get('/main','MainController@index');
-Route::post('/main/checklogin', 'MainController@checklogin');
-Route::get('main/succeslogin', 'Maincontroller@succeslogin');
-Route::get('main/logout', 'MainController@logout');
+
+Route::get('/register', 'RegistrationController@create');
+Route::post('register', 'RegistrationController@store');
+
+Route::get('/main/register','MainController@register');
+
+
+Route::post('/login', 'SessionsController@store');
+Route::get('/logout', 'SessionsController@destroy');
+
+
+
+

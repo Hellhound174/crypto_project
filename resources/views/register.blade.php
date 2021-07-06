@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head>
+<link>
 
-<title>
-    Coins
-</title>
-
+    <title>
+        Coins
+    </title>
+    <link rel="script" href="script.js">
 
     <style type="text/css">
 
@@ -38,7 +38,16 @@
 
 
 
-
+        #tekst {
+            color: white;
+            text-align: center;
+        }
+        #menu {
+            margin-top: -20px;
+            width: auto;
+            height: 100px;
+            background-color: black;
+        }
 
 
         .header-left
@@ -306,11 +315,11 @@
             padding: 20px;
             margin-left: 140px;
         }
-    </style>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>                                                                                                                                                                                                                                                                                                                                                                                                              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        </style>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>                                                                                                                                                                                                                                                                                                                                                                                                              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
 
 
@@ -375,32 +384,39 @@
         <a href="#about">Inloggen</a>
     </div>
 </div>
+
 <div class="header">
-    <h2>Login</h2>
+    <h2>Registreren</h2>
 </div>
 
 
+<form method="post" action="{{'/register'}}">
+    {{  csrf_field()    }}
+    <div class="input-group">
+        <label>Username</label>
+        <input type="text" class="form-control" id="name" name="name">
+    </div>
 
-             <form method="post" action="{{'/login'}}">
-                {{  csrf_field()    }}
-                 <div class="input-group">
-                     <label>E-mail:</label>
-                     <input type="email" name="email" >
-                 </div>
-                 <div class="input-group">
-                     <label>Password</label>
-                     <input type="password" name="password">
-                 </div>
-                 <div class="input-group">
-                     <button type="submit" class="btn" name="login" value="login">Login</button>
-                 </div>
-                 <p>
-                     Not yet a member? <a href="http://localhost/main/register">Sign up</a>
-                 </p>
-            </form>
+    <div class="input-group">
+        <label>Email</label>
+        <input type="email" class="form-control" id="email" name="email">
+    </div>
+    <div class="input-group">
+        <label>Password</label>
+        <input type="password" class="form-control" id="password" name="password">
+    </div>
+    <div class="input-group">
+        <button type="submit" class="btn" name="register">Register</button>
+    </div>
+    <p>
+       Already a member? <a href="http://localhost/main/login">Sign in</a>
+    </p>
+</form>
+</div>
 
 <br/>
 <br/>
+
 
 <footer class="site-footer">
     <div class="container">
@@ -423,20 +439,20 @@
 
 
             <div class="col-xs-6 col-md-3">
-                <h6>Quick Links</h6>20
+                <h6>Quick Links</h6>
                 <ul class="footer-links">
                     <li><a href="">About Us</a></li>
                     <li><a href="">Contact Us</a></li>
                 </ul>
             </div>
         </div>
-        <hr>0
+        <hr>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-sm-6 col-xs-12">
-                <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by
-                    <a href="#">Jonna B</a>.
+                <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by
+                    <a href="#">Jonna</a>.
                 </p>
             </div>
 
@@ -454,6 +470,5 @@
     </div>
 </footer>
 
-
-    </body>
+</body>
 </html>
