@@ -8,21 +8,25 @@
 
         <style type="text/css">
 
-
+            .head {
+                width: auto;
+                height: 80px;
+                background-color: #1a202c;
+            }
 
 
 
         </style>
     </head>
     <body>
-    <header>
+    <header class="head">
 
 
     </header>
 
         <br/>
         <div class="container box">
-            <h3 align="center">login systeem</h3>
+            <h3 align="center">Registreren</h3>
             <br/>
                 @if(isset(Auth::user()->email))
                     <div class="Alert">
