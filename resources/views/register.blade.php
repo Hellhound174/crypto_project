@@ -336,9 +336,7 @@
 <div class="container box">
 
     <br/>
-    @if(isset(Auth::user()->email))
-        <script>window.location="/main/succeslogin";</script>
-    @endif
+
 
     @if($message = Session::get('error'))
         <div class="alert alert-danger alert block">
@@ -352,7 +350,7 @@
     @if(count($errors) > 0)
         <div class="alert alert-danger">
             <ul>
-                @foreach($erros->all() as $error)
+                @foreach($errors->all() as $error)
                     <li>{{ $error }}</li>
                 @endforeach
             </ul>
@@ -389,7 +387,6 @@
     <h2>Registreren</h2>
 </div>
 
-
 <form method="post" action="{{'/register'}}">
     {{  csrf_field()    }}
     <div class="input-group">
@@ -409,11 +406,11 @@
         <button type="submit" class="btn" name="register">Register</button>
     </div>
     <p>
-       Already a member? <a href="http://localhost/main/login">Sign in</a>
+       Already a member? <a href="http://localhost/main">Sign in</a>
     </p>
 </form>
 </div>
-
+<br/>
 <br/>
 <br/>
 

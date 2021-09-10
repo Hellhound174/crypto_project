@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+
 
 class RegistrationController extends Controller {
     public function create()
    {
-       return view('registration.create');
+       return view('register.create');
    }
+
 
 
 
@@ -24,6 +27,6 @@ public function store()
 
     auth()->login($user);
 
-    return redirect()->to('/succeslogin');
+    return redirect()->to('/main/home');
     }
 }
