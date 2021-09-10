@@ -16,15 +16,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/main', 'MainController@index');
 
 
-
 Route::get('/register', 'RegistrationController@create');
 Route::post('register', 'RegistrationController@store');
 
 Route::get('/main/register','MainController@register');
+Route::get('/main/home', 'Maincontroller@home');
 
+Route::get('/main/logout', 'MainController@logout');
 
-Route::post('/login', 'SessionsController@store');
-Route::get('/logout', 'SessionsController@destroy');
+Route::post('/login', 'SessionController@store');
+Route::get('/logout', 'SessionController@destroy');
+
+Route::get("/test", 'CoinController');
 
 
 

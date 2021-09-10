@@ -19,6 +19,11 @@ class MainController extends Controller
         return view('register');
     }
 
+    function home()
+    {
+        return view('home');
+    }
+
 
 }
 

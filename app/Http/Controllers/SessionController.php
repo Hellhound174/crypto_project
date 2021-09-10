@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class SessionsController extends Controller
+class SessionController extends Controller
 {
     public function create()
     {
         return view('sessions.create');
     }
+
+
 
     public function store()
     {
@@ -19,7 +21,7 @@ class SessionsController extends Controller
             ]);
         }
 
-        return redirect()->to('/succeslogin');
+        return redirect()->to('/main/home');
     }
 
     public function destroy()

@@ -99,6 +99,8 @@
         }
 
 
+       
+
 
         .dropdown-content {
             display: none;
@@ -327,9 +329,7 @@
 <div class="container box">
 
     <br/>
-    @if(isset(Auth::user()->email))
-        <script>window.location="/main/succeslogin";</script>
-    @endif
+
 
     @if($message = Session::get('error'))
         <div class="alert alert-danger alert block">
@@ -343,7 +343,7 @@
     @if(count($errors) > 0)
         <div class="alert alert-danger">
             <ul>
-                @foreach($erros->all() as $error)
+                @foreach($errors->all() as $error)
                     <li>{{ $error }}</li>
                 @endforeach
             </ul>
@@ -423,19 +423,19 @@
 
 
             <div class="col-xs-6 col-md-3">
-                <h6>Quick Links</h6>20
+                <h6>Quick Links</h6>
                 <ul class="footer-links">
                     <li><a href="">About Us</a></li>
                     <li><a href="">Contact Us</a></li>
                 </ul>
             </div>
         </div>
-        <hr>0
+        <hr>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-sm-6 col-xs-12">
-                <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by
+                <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by
                     <a href="#">Jonna B</a>.
                 </p>
             </div>
